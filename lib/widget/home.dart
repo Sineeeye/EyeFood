@@ -1,8 +1,10 @@
 import 'package:eyefood/utirity/my_constant.dart';
 import 'package:eyefood/utirity/normal_dialog.dart';
+import 'package:eyefood/widget/list_prodct.dart';
 import 'package:eyefood/widget/sign_in.dart';
 import 'package:eyefood/widget/sign_up.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -13,6 +15,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 //Field
   List<String> banners = MyConstant().banners;
+  List<String> categorys = MyConstant().categorys;
   String nameUserLogin;
 
 //Method
@@ -33,9 +36,21 @@ class _HomeState extends State<Home> {
     }
   }
 
+  void routeToListProduct(String category) {
+    MaterialPageRoute route =
+        MaterialPageRoute(builder: (BuildContext buildContext) {
+      return ListProduct(
+        category: category,
+      );
+    });
+    Navigator.of(context).push(route);
+  }
+
   Widget noodleGroup() {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        routeToListProduct(categorys[0]);
+      },
       child: Container(
         width: 100.0,
         child: Column(
@@ -57,7 +72,9 @@ class _HomeState extends State<Home> {
 
   Widget riceGroup() {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        routeToListProduct(categorys[1]);
+      },
       child: Container(
         width: 100.0,
         child: Column(
@@ -79,7 +96,9 @@ class _HomeState extends State<Home> {
 
   Widget snackgroup() {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        routeToListProduct(categorys[2]);
+      },
       child: Container(
         width: 100.0,
         child: Column(
@@ -149,7 +168,7 @@ class _HomeState extends State<Home> {
         MaterialPageRoute(builder: (BuildContext buildContext) {
       return object;
     });
-    Navigator.of(context).push(route).then((object){
+    Navigator.of(context).push(route).then((object) {
       checkLoginStatus();
     });
   }

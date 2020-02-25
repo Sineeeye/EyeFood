@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class MyConstant {
   //Field
   List<String> banners = ['images/banner1.png'];
+  List<String> categorys = ['Noodle','rice','snack'];
 
   Widget mySizebox = SizedBox(
     height: 10.0,
