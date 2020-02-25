@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "696591663607",
+    "firebase_url": "https://eyefood-d4f34.firebaseio.com",
+    "project_id": "eyefood-d4f34",
+    "storage_bucket": "eyefood-d4f34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696591663607:android:fb3f79e2461f81f1196ef2",
+        "android_client_info": {
+          "package_name": "com.flutterthailand.eyefood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696591663607-p87t699ijaamrsbu7k3gjgpg6rs896eo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqZwf8yNly8iPVsMB5ExkchAPhPmqF1QE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696591663607-p87t699ijaamrsbu7k3gjgpg6rs896eo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
